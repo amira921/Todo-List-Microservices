@@ -36,6 +36,7 @@ public class UserController {
             response.put("instructions", "To activate your account, please check your email inbox to verify your email address.");
             return ResponseEntity.status(HttpStatus.CREATED).body(response);
 
+
         }catch (AuthException e) {
             response.put("status", "error");
             response.put("message", "Account already exists.");
@@ -44,7 +45,7 @@ public class UserController {
         catch (Exception e) {
             response.put("status", "error");
             response.put("message", "Unknown error occurred");
-            return ResponseEntity.status(HttpStatus.FOUND).body(response);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
         }
     }
 
