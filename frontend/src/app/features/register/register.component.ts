@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {FormGroup} from '@angular/forms';
 import {REGISTRATION_FORM} from "../../statics/forms";
-import {User} from "../../core/models/user.interface";
+import {NewUser} from "../../core/models/authentication.interface";
 import {ErrorResponse} from "../../core/models/error.interface";
 import {Router} from '@angular/router';
 import {ValidationService} from "../../core/services/validation.service";
@@ -16,32 +16,31 @@ import {ValidationService} from "../../core/services/validation.service";
 export class RegisterComponent{
     registrationForm!: FormGroup;
     registrationFields = REGISTRATION_FORM;
-    errorMessage: String | null = null;
+    message: String | null = null;
     apiUrl: string = "http://localhost:8081/auth/register";
 
     constructor(private http: HttpClient, private router: Router, private validationService: ValidationService) {
         this.registrationForm = this.validationService.createFormGroup(this.registrationFields);
     }
 
-    onSubmit(): void {
+    onRegister(): void {
         if (!this.registrationForm.valid) return;
-        const user: User = this.registrationForm.value;
+        const user: NewUser = this.registrationForm.value;
 
         this.http.post(this.apiUrl, user, {responseType: 'text'}).subscribe({
             next: () => {
-                console.log('Registration successful');
-                this.router.navigate(['']);
+                this.message = "Registration successful, Go back to the Login Page ";
             },
             error: (error) => {
                 if (error.status == 302) {
-                    this.errorMessage = 'Email already exists, please try to login.';
+                    this.message = 'Email already exists, please try to login.';
                 } else if (error.status == 400) {
                     const apiError = JSON.parse(error.error);
-                    this.errorMessage = apiError.errors
+                    this.message = apiError.errors
                         .map((err: ErrorResponse) => `• ${err.message}`)
                         .join('\n\n');
                 } else if (error.status == 500) {
-                    this.errorMessage = 'Internal server error occurred, try again later';
+                    this.message = 'Internal server error occurred, try again later';
                 }
             }
         });

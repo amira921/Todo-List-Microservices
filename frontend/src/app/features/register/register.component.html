@@ -4,7 +4,7 @@
             <div class="col-lg-6">
                 <div class="title mt-4">Todo App</div>
                 <p>Organize Your Work & Manage Your Time!</p>
-                <form autocomplete="disabled" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                <form autocomplete="disabled" [formGroup]="registrationForm" (ngSubmit)="onRegister()">
                     <div class="row mt-3">
                         <div class="col-12 inputs-container">
                             <div *ngFor="let field of registrationFields" class="mb-3">
@@ -23,12 +23,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 error"> {{errorMessage}}</div>
+                        <div class="col-12 error">
+                            <p> {{message}} </p>
+                        </div>
                         <div class="col-12 form-group">
                             <button type="submit" class="btn">SignUp</button>
                         </div>
                         <div class="col-12 form-group">
-                            <a routerLink="" class="pageLink">Go Back</a>
+                            <p><a routerLink="" class="pageLink">Go Back</a></p>
                         </div>
                     </div>
                 </form>
