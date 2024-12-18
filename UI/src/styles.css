@@ -4,10 +4,9 @@
     background-image: url('assets/images/homeIcon.png');
     background-size: cover;
     background-position: center;
-    height: 300px;
-    width: 300px;
-    margin: 15% 10%;
-   display: block;
+    height: 200px;
+    width: 200px;
+    margin: 30% 10%;
 }
 
 .btn {
@@ -20,4 +19,15 @@
     border-radius: 10px;
     width: auto;
     max-width: 200px;
+}
+
+.main{
+    background-color: #eeeded;
+}
+
+
+@media (max-width: 1000px) {
+    .homeIcon {
+        display: none;
+    }
 }

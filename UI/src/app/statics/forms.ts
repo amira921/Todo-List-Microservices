@@ -5,7 +5,7 @@ export const REGISTRATION_FORM =[
         inputType: 'email',
         controlName: 'email',
         required: true,
-        placeholder: 'Enter your email address',
+        placeholder: '',
         validations: [
             { name: 'required', validator: 'required', message: 'Email is required' },
             { name: 'pattern', validator: 'pattern', message: 'Enter a valid email', args: [/^\S+@\S+\.\S+$/] },
@@ -17,7 +17,7 @@ export const REGISTRATION_FORM =[
         inputType: 'text',
         controlName: 'username',
         required: true,
-        placeholder: 'Enter your username',
+        placeholder: '',
         validations: [{ name: 'required', validator: 'required', message: 'Username is required' }],
     },
     {
@@ -26,7 +26,7 @@ export const REGISTRATION_FORM =[
         inputType: 'password',
         controlName: 'password',
         required: true,
-        placeholder: 'Enter your password',
+        placeholder: '',
         validations: [
             { name: 'required', validator: 'required', message: 'Password is required' },
             { name: 'pattern', validator: 'pattern', message: 'Password must contain at least one digit, one lowercase letter, one uppercase letter, one special character', args: [/^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/] },
