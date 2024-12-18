@@ -4,7 +4,7 @@ This project follows a  microservices, client-server architectures, consisting o
 <div align="center">
    <h2>Demo</h2>
 
-   [![Demo](asset/website-home.PNG)](https://drive.google.com/file/d/1oQOSAmZKEzCw7c-x5yrKS_8traggIklm/view?usp=sharing)
+   [![Demo](assets/website-home.PNG)](https://drive.google.com/file/d/1oQOSAmZKEzCw7c-x5yrKS_8traggIklm/view?usp=sharing)
 </div>
 
 # Application Architecture
@@ -68,7 +68,7 @@ Install dependencies: mvn install
 
 ### Swagger end-points
 <p align="center">
-<img src="asset/swagger-authentication.PNG" width="400" length="600">
+<img src="assets/swagger-authentication.PNG" width="400" length="600">
 </p>
 
 ## 2. Task Service
@@ -100,7 +100,7 @@ Install dependencies: mvn install
 ### Swagger end-points
 
 <p align="center">
-<img src="asset/swagger-task.PNG" width="400" length="600">
+<img src="assets/swagger-task.PNG" width="400" length="600">
 </p>
 
 ## 3. Web Portal
@@ -119,13 +119,13 @@ Install dependencies: mvn install
 ### Swagger end-points
 
 <p align="center">
-<img src="asset/swagger-app-1.PNG" width="400" length="600">
-<img src="asset/swagger-app-2.PNG" width="400" length="600">
+<img src="assets/swagger-app-1.PNG" width="400" length="600">
+<img src="assets/swagger-app-2.PNG" width="400" length="600">
 </p>
 
 ## 4. Discovery Service
 <p align="center">
-<img src="asset/registry-service.PNG" width="600" length="600">
+<img src="assets/registry-service.PNG" width="600" length="600">
 </p>
 
 ### Technologies Used
@@ -151,19 +151,19 @@ Install dependencies: mvn install
 <p align="left"> 
 
 **1. invalid data**
-<p align="center"><img src="asset/invalidDataRequest.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/invalidDataRequest.PNG" width="600" length="600"></p>
 
 **2. valid data**
-<p align="center"><img src="asset/registration.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/registration.PNG" width="600" length="600"></p>
 
 **3. user exists**
-<p align="center"><img src="asset/registration_userExists.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/registration_userExists.PNG" width="600" length="600"></p>
 
 **4. verification email to activate account**
-<p align="center"><img src="asset/account-verification.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/account-verification.PNG" width="600" length="600"></p>
 
 **5. account activation**
-<p align="center"><img src="asset/activation.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/activation.PNG" width="600" length="600"></p>
 </p>
 </details>
 
@@ -175,22 +175,22 @@ Install dependencies: mvn install
 <p align="left">
 
 **1. user is not found**
-<p align="center"><img src="asset/reset-not-found.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/reset-not-found.PNG" width="600" length="600"></p>
 
 **2. user is found**
-<p align="center"><img src="asset/rerset-found.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/rerset-found.PNG" width="600" length="600"></p>
 
 **3. verify email - token is expired**
-<p align="center"><img src="asset/reset-verification.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/reset-verification.PNG" width="600" length="600"></p>
 
 **4. verify email- token is valid**
 <p align="center">
-<img src="asset/reset-token-expired.PNG" width="300" length="600">
+<img src="assets/reset-token-expired.PNG" width="300" length="600">
 
 **5. send new password**
 <p align="center">
-<img src="asset/reset-send-new-password.PNG" width="300" length="600">
-<img src="asset/reset-password-changed.PNG" width="300" length="600"></p>
+<img src="assets/reset-send-new-password.PNG" width="300" length="600">
+<img src="assets/reset-password-changed.PNG" width="300" length="600"></p>
 </p>
 </details>
 
@@ -200,16 +200,16 @@ Install dependencies: mvn install
 <p align="left>
 
 **1. account is inactive**
-<p align="center"><img src="asset/login-inactive.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/login-inactive.PNG" width="600" length="600"></p>
 
 **2. account is not found**
-<p align="center"><img src="asset/login-notfound.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/login-notfound.PNG" width="600" length="600"></p>
 
 **3. password is incorrect**
-<p align="center"><img src="asset/login-incorrectPassword.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/login-incorrectPassword.PNG" width="600" length="600"></p>
 
 **4. valid login**
-<p align="center"><img src="asset/login-active.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/login-active.PNG" width="600" length="600"></p>
 </p>
 </details>
 
@@ -220,13 +220,13 @@ Install dependencies: mvn install
 <p align="left>
 
 **1. get all tasks - user didn't authenticate**
-<p align="center"><img src="asset/task-authentication.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/task-authentication.PNG" width="600" length="600"></p>
 
 **2. get all tasks**
-<p align="center"><img src="asset/all-tasks.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/all-tasks.PNG" width="600" length="600"></p>
 
 **3. filter tasks: completed tasks**
-<p align="center"><img src="asset/filter-completed.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/filter-completed.PNG" width="600" length="600"></p>
 
 </p>
 </details>
@@ -237,19 +237,19 @@ Install dependencies: mvn install
 <p align="left>
 
 **1. add task - user is authorized**
-<p align="center"><img src="asset/add task - authorized.PNG" width="700" length="600"></p>
+<p align="center"><img src="assets/add task - authorized.PNG" width="700" length="600"></p>
 
 **2. update task - user is authorized**
-<p align="center"><img src="asset/update task-authorized.PNG" width="700" length="600"></p>
+<p align="center"><img src="assets/update task-authorized.PNG" width="700" length="600"></p>
 
 **3. update task - user is unauthorized**
-<p align="center"><img src="asset/update task-unauthorized.PNG" width="700" length="600"></p>
+<p align="center"><img src="assets/update task-unauthorized.PNG" width="700" length="600"></p>
 
 **4. update task - user is authorized - data is invalid**
-<p align="center"><img src="asset/update task-authorized-validation.PNG" width="600" length="600"></p>
+<p align="center"><img src="assets/update task-authorized-validation.PNG" width="600" length="600"></p>
 
 **5. delete task - user authorized**
-<p align="center"><img src="asset/delete task - authorized.PNG" width="700" length="600"></p>
+<p align="center"><img src="assets/delete task - authorized.PNG" width="700" length="600"></p>
 
 </p>
 </details>
