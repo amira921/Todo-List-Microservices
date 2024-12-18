@@ -66,7 +66,7 @@ public class UserController {
             case "incorrectPassword":
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Password is incorrect, please try again!");
         }
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(response);
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
     @PostMapping("/reset-password")
