@@ -44,7 +44,7 @@ public class UserController {
         catch (Exception e) {
             response.put("status", "error");
             response.put("message", "Unknown error occurred");
-            return ResponseEntity.status(HttpStatus.FOUND).body(response);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
         }
     }
 
