@@ -6,7 +6,7 @@
         <groupId>com.todo</groupId>
         <artifactId>TodoApp</artifactId>
         <version>1.0</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
     <artifactId>api-gateway</artifactId>
     <name>api-gateway</name>
