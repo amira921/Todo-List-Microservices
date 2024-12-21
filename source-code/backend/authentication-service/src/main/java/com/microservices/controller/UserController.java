@@ -56,14 +56,13 @@ public class UserController {
     public ResponseEntity<?> authenticate(@Valid @RequestBody AuthRequest authRequest) {
         String response = userService.authenticate(authRequest);
         switch (response) {
-            case "inactive": return ResponseEntity
-                    .status(HttpStatus.FORBIDDEN)
-                    .body("Account with " + authRequest.getEmail() + " is inactive, please check your inbox for activation");
-            case "notFound": return ResponseEntity
-                    .status(HttpStatus.NOT_FOUND)
+            case "inactive": return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                        .body("Account with " + authRequest.getEmail() + " is inactive, please check your inbox for activation");
+
+            case "notFound": return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body("Account with " + authRequest.getEmail() + " is not found, please register first!");
-            case "incorrectPassword": return ResponseEntity
-                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
+
+            case "incorrectPassword": return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Password is incorrect, please try again!");
         }
         return ResponseEntity.status(HttpStatus.OK).body(response);
