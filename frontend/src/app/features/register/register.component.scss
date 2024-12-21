@@ -1,0 +1,62 @@
+.workspace {
+  font-family: 'Comic Sans MS', 'Comic Sans', 'cursive';
+  background-color: #f8f9fa;
+  color: #917156;
+  width: 100%;
+}
+
+.parent {
+  background: #ffffff;
+  box-shadow: 0px 10px 30px #00000017;
+  border-radius: 30px;
+  padding: 20px;
+  width: 50%;
+  max-width: 500px;
+  margin: 3% auto;
+}
+
+@media (max-width: 768px) {
+  .parent {
+    padding: 15px;
+    max-width: 80%;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .homeIcon {
+    display: none;
+  }
+}
+
+
+.title {
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+p{
+  font-size: small;
+  text-align: center;
+  padding-bottom: 2px;
+}
+
+.pageLink{
+  color: #917156;
+}
+
+.error{
+  text-align: left;
+  white-space: pre-line
+}
+
+.form-control:focus {
+  border-color: #917156;
+  box-shadow: none;
+}
+
+.form-group{
+  text-align: center;
+}

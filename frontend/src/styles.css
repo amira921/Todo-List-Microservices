@@ -1,0 +1,32 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.homeIcon {
+    background-image: url('assets/images/homeIcon.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    margin: 30% 10%;
+}
+
+.btn {
+    height: auto;
+    padding: 10px 20px;
+    background: #917156;
+    border: none;
+    color: #ffffff;
+    border-radius: 10px;
+    width: auto;
+    max-width: 200px;
+}
+
+.main{
+    background-color: #eeeded;
+}
+
+
+@media (max-width: 1000px) {
+    .homeIcon {
+        display: none;
+    }
+}

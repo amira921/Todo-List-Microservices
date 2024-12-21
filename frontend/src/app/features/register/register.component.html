@@ -1,0 +1,43 @@
+<div class="d-flex flex-row workspace align-items-center">
+    <div class="container-fluid">
+        <div class="d-flex parent">
+            <div class="col-lg-6">
+                <div class="title mt-4">Todo App</div>
+                <p>Organize Your Work & Manage Your Time!</p>
+                <form autocomplete="disabled" [formGroup]="registrationForm" (ngSubmit)="onRegister()">
+                    <div class="row mt-3">
+                        <div class="col-12 inputs-container">
+                            <div *ngFor="let field of registrationFields" class="mb-3">
+                                <label for="{{field.controlName}}" class="form-label">{{field.label}}</label>
+                                <input
+                                        *ngIf="field.type === 'input'"
+                                        [type]="field.inputType"
+                                        id="{{field.controlName}}"
+                                        formControlName="{{field.controlName}}"
+                                        [placeholder]="field.placeholder"
+                                        [attr.required]="field.required ? true : null"
+                                        class="form-control"
+                                />
+                                <div *ngIf="getErrorMessage(field.controlName)" class="error">
+                                    {{ getErrorMessage(field.controlName) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 error">
+                            <p> {{message}} </p>
+                        </div>
+                        <div class="col-12 form-group">
+                            <button type="submit" class="btn">SignUp</button>
+                        </div>
+                        <div class="col-12 form-group">
+                            <p><a routerLink="" class="pageLink">Go Back</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 homeIcon"></div>
+        </div>
+    </div>
+</div>
+
+
